@@ -12,8 +12,12 @@
 #include <frc/drive/DifferentialDrive.h>
 #include <frc/livewindow/LiveWindow.h>
 
+#include <frc/simulation/Field2d.h>
+
 class Robot : public frc::TimedRobot {
  public:
+  frc::Field2d field;
+
   Robot() {
     m_robotDrive.SetExpiration(0.1);
     m_timer.Start();
